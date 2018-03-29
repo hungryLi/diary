@@ -1,0 +1,45 @@
+<!--index.wxml-->
+
+<scroll-view scroll-y="true">
+
+  <!-- <view class="item-list" bindtap="showDetail" id="in1">
+    <image mode="aspectFit" src="http://m.chanyouji.cn/index-cover/64695-2679221.jpg?imageView2/1/w/620/h/330/format/jpg" class="cover"></image>
+    <view class="desc">
+      <view class="desc-left">ahahhahaa</view>
+      <view class="desc-right">2017-05-02</view>
+    </view>
+  </view>
+  <view class="item-list" bindtap="showDetail" id="in1">
+    <image mode="aspectFit" src="http://m.chanyouji.cn/index-cover/64695-2679221.jpg?imageView2/1/w/620/h/330/format/jpg" class="cover"></image>
+    <view class="desc">
+      <view class="desc-left">ahahhahaa</view>
+      <view class="desc-right">2017-05-02</view>
+    </view>
+  </view> -->
+  <view wx:for="{{diaries}}" wx:for-index="idx" class="item-list" bindtap="showDetail" id="{{idx}}">
+    <image mode="aspectFit" src="{{item.meta.cover}}" class="cover"></image>
+    <view class="desc">
+      <view class="desc-left">{{item.meta.title}}</view>
+      <view class="desc-right">{{item.meta.meta}}</view>
+    </view>
+  </view>
+
+
+</scroll-view>
+
+<!--
+<view class="container">
+ <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+    <text>hello likang</text>
+  </view>
+  
+</view>
+-->

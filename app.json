@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/me/aboutMe",
+    "pages/logs/logs",
+    "pages/entry/entry"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFC0CB",
+    "navigationBarTitleText": "饭碗日记",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#ffffff",
+    "selectColor": "#f2f2f2",
+    "backgroundColor": "#FFC0CB",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "足迹",
+        "iconPath": "images/icon/mark.png",
+        "selectedIconPath": "images/icon/markHL.png"
+      },
+      {
+        "pagePath": "pages/me/aboutMe",
+        "text": "我",
+        "iconPath": "images/icon/mine.png",
+        "selectedIconPath": "images/icon/mineHL.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
