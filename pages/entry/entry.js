@@ -47,10 +47,8 @@ Page({
 
   getDiares(param){
     var diaryData = app.data;
-    console.log('params :' + diaryData);
     var id = param['id'];
-    // console.log(diaryData[id]);
-    console.log(diaryData[id].list);
+    console.log(diaryData[id]);
     if (id == undefined){
         id = 0;
     }

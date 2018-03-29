@@ -20,27 +20,71 @@
     </view>
 </view>
 <!-- 正文内容 -->
-<view wx:for="{{diary.list}}" wx:for-item="{{content}}" class="content">
-    <view>{{content.type}}</view>
+<view wx:for="{{diary.list}}" wx:for-item="content" class="content">
     <template is="content-item" data="{{content}}"></template>
 </view>
+
+<!-- 结束 -->
+<view class="foot">
+    <view class="foot-midle">
+        <view class="foot-the">THE</view> \t
+        <view class="foot-end">END</view>
+    </view>
+</view>
+
 
 <!-- 单条内容缩略 -->
 <template name="content-item">
     <block wx:if="{{content.type == 'TEXT'}}">
-        <view style="margin-top:30rpx;">  
+        <view style="margin-top:20rpx;">  
             <text wx:if="{{content.type == 'TEXT'}}" class="text">
                 {{content.content}}
             </text>
         </view>
+        <view class="poi-info-view">
+            <view class="poi-info">
+                <image class="position-img" src="../../images/icon/poi.png" mode="aspectFill"></image>
+                \t {{content.poi.name}}
+            </view>
+            <view class="comment-info">
+                <image class="position-img" src="../../images/icon/like.png" mode="aspectFill"></image>
+                \t {{content.likeNum}} \t
+                <image class="position-img" src="../../images/icon/comment.png" code="aspectFill"></image>
+                \t {{content.commentNum}}
+            </view>
+        </view>
     </block>
     <block  wx:if="{{content.type == 'IMAGE'}}">
         <image class="media" mode="aspectFill" src="{{content.content}}" bindtap="enterPreviewMode" data-src="{{content.content}}"></image>
-        <view style="margin-top:10rpx;">{{content.description}}</view>
+        <view class="ctn-title">{{content.description}}</view>
+        <view class="poi-info-view">
+            <view class="poi-info">
+                <image class="position-img" src="../../images/icon/poi.png" mode="aspectFill"></image>
+                \t {{content.poi.name}}
+            </view>
+            <view class="comment-info">
+                <image class="position-img" src="../../images/icon/like.png" mode="aspectFill"></image>
+                \t {{content.likeNum}} \t
+                <image class="position-img" src="../../images/icon/comment.png" code="aspectFill"></image>
+                \t {{content.commentNum}}
+            </view>
+        </view>
     </block>
     <block wx:if="{{content.type == 'VIDEO'}}">
         <video class="media" src="{{content.content}}"></video>
-        <view style="margin-top:10rpx;">{{content.description}}</view>
+        <view class="ctn-title">{{content.description}}</view>
+        <view class="poi-info-view">
+            <view class="poi-info">
+                <image class="position-img" src="../../images/icon/poi.png" mode="aspectFill"></image>
+                \t {{content.poi.name}}
+            </view>
+            <view class="comment-info">
+                <image class="position-img" src="../../images/icon/like.png" mode="aspectFill"></image>
+                \t {{content.likeNum}} \t
+                <image class="position-img" src="../../images/icon/comment.png" code="aspectFill"></image>
+                \t {{content.commentNum}}
+            </view>
+        </view>
     </block>
 </template>
 
