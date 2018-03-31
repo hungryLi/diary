@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.93",
 	"appid": "wx63b6f5bdad5b3c77",
-	"projectname": "bazahei",
+	"projectname": "mydiary",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

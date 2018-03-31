@@ -101,4 +101,7 @@ foot{
     display: inline-block;
     color: #FFC0CB;
 }
-
+swiper{
+    height: 400rpx;
+    margin-top: 280rpx;
+}

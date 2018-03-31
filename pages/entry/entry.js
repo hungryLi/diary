@@ -21,7 +21,12 @@ Page({
     // 当前预览索引
     previewIndex:0,
     //多媒体内容列表
-    mediaList:[]
+    mediaList:[],
+    indicatordots:true,
+    autoplay:false,
+    interval:5000,
+    duration:500,
+    imgUrl:[]
   },
 
   /**
@@ -29,6 +34,7 @@ Page({
    */
   onLoad: function (param) {
       this.getDiares(param);
+      this.swiperImgs();
   },
 
   /**
@@ -55,7 +61,26 @@ Page({
     this.setData({
         diary: diaryData[id]
     })
+    var imgs = [];
+    var lists = diaryData[id].list;
+    for (var index in lists){
+        var img = lists[index];
+        if(img.type == 'IMAGE'){
+            imgs.push(img.content);
+        }
+    }
+    this.setData({
+        imgUrl:imgs
+    })
+    // console.log(this.imgUrl.size);
   },
-
+  // 点击图片进入图片切换模式
+  enterPreviewMode:function(){
+    
+  },
+  // 图片滑动
+  swiperImgs(){
+    
+  }
 
 })
