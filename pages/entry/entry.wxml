@@ -27,8 +27,8 @@
 <!-- 结束 -->
 <view class="foot">
     <view class="foot-midle">
-        <view class="foot-the">THE</view> \t
-        <view class="foot-end">END</view>
+        <text class="foot-the">THE</text> 
+        <text class="foot-end">END</text>
     </view>
 </view>
 

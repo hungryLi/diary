@@ -12,10 +12,17 @@ Page({
   },
   
   onLoad:function(){
-    this.setData({
-      diaries : dia.diaries
-    }),
-    app.data = dia.diaries
+    var diaryData = app.data;
+    if(diaryData == null || diaryData == undefined){
+        app.data = dia.diaries;
+        this.setData({
+            diaries : dia.diaries
+        })
+    }else{
+        this.setData({
+            diaries: diaryData
+        })
+    }
   },
 
   showDetail:function(event){

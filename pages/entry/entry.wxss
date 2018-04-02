@@ -76,30 +76,20 @@ page{
 }
 
 /* foot */
+.foot{
+    height:260rpx;
+    width: 100%;
+    line-height: 260rpx;
+}
 .foot-midle{
     font-size: 40rpx;
-    height: 40rpx;
-    width: 100rpx;
+    height: 60rpx;
+    width: 100%;
     text-align: center;
 }
-foot{
-    height: 260rpx;
-    width: 100%;
-}
-.foot-midle {
-    height:40rpx;
-    width:180rpx;
-    text-align:center;
-    margin:0 auto;
-    line-height:260rpx;
-}
-
-.foot-the{
-    display: inline-block;
-}
 .foot-end{
-    display: inline-block;
     color: #FFC0CB;
+    margin-left: 10rpx;
 }
 
 /* 图片滚动 */
