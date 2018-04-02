@@ -101,7 +101,20 @@ foot{
     display: inline-block;
     color: #FFC0CB;
 }
-swiper{
-    height: 400rpx;
-    margin-top: 280rpx;
+
+/* 图片滚动 */
+.swiper-img{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 99;
 }
+.swiper-img image{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+

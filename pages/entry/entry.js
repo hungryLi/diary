@@ -75,8 +75,20 @@ Page({
     // console.log(this.imgUrl.size);
   },
   // 点击图片进入图片切换模式
-  enterPreviewMode:function(){
-    
+  enterPreviewMode: function (event){
+    let url =  event.target.dataset.src;
+    let index = this.data.imgUrl.indexOf(url);
+    console.log(url,index);
+    this.setData({
+        previewMode:true,
+        previewIndex: index
+    })
+  },
+  leavePreviewMode:function(){
+    this.setData({
+        previewMode:false,
+        previewIndex: 0
+    })  
   },
   // 图片滑动
   swiperImgs(){
