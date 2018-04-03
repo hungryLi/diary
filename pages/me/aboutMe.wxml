@@ -1,2 +1,32 @@
 <!--pages/me/aboutMe.wxml-->
-<text>pages/me/aboutMe.wxml</text>
+<!-- 头部 -->
+<view class='header'>
+    <view class='profile'>
+        <image class='avartor-me' mode='aspectFill' src="{{userInfo.avatarUrl}}"></image>
+        <view class='head-userinfo'>
+            <view>{{userInfo.nickName}}</view>
+            <view>{{diaryNum}}篇日记</view>
+        </view>
+    </view>
+
+    <view class='tabList'>
+        <view wx:for="{{tabs}}" wx:for-index="idx" class='tab' bindtap='touchTab' id='{{idx}}'>
+            <view class='tabView'>
+                <image class='tabImg' src='{{currentIndex == idx ? item.iconActive : item.icon}}'></image>
+                <view class='tabTitle' style='color:{{currentIndex == idx ? "#FFFFFF" : "#B3B3B3"}}'>{{item.title}}</view>
+            </view>
+        </view>
+    </view>
+    <!-- tab内容 -->
+    
+    <view>
+        
+
+
+    </view>
+
+</view>
+
+
+
+

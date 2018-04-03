@@ -23,6 +23,7 @@ page{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #B3B3B3;
 }
 .desc-right{
   float: right;

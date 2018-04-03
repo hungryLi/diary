@@ -44,6 +44,7 @@ page{
 }
 .text{
     font-size: 25rpx;
+    color: #B3B3B3;
 }
 .media{
     width: 100%;

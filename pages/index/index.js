@@ -1,6 +1,6 @@
 //index.js
 //获取应用实例
-const app = getApp()
+const app = getApp();
 const dia = require("../../demo/diaries.js");
 
 Page({
@@ -24,7 +24,15 @@ Page({
         })
     }
   },
-
+  onPullDownRefresh:function(){
+    console.log('push down ...');
+    wx.showNavigationBarLoading();
+    
+    setTimeout(function(){
+        wx.hideNavigationBarLoading();
+        wx.stopPullDownRefresh();
+    },1500);
+  },
   showDetail:function(event){
       wx:wx.navigateTo({
           url: '../entry/entry?id='+event.currentTarget.id,
